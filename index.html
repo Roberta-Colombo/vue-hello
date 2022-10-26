@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Vue Hello</title>
 </head>
 
 <body>
     <div id="container">
-        <h1>{{ message }}</h1>
-        <img v-bind:src="image" alt="Logo Vue">
+        <h1 :class="colorClass">{{ message }}</h1>
+        <img v-bind:src="image" :class="myImg" alt="Logo Vue">
+
+        <br>
+        <button @click="changeColor">Cambia colore!</button>
     </div>
 
     
